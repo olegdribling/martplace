@@ -1,7 +1,103 @@
-html{
-    box-sizing: border-box;
-}
-*, *::before, *::after{
-    box-sizing: inherit;
-}
+@import 'vars';
+@import 'global';
+@import 'fonts';
 
+.header__top{
+    height: 100px;
+    background-color: $grey;
+}
+.header__top-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.header__menu-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button{
+        background-color: $button;
+        color: white;
+        font-size: 14px;
+        padding: 12px 18px;
+        border-radius: 18px;
+        border: none;
+        margin-right: 50px;
+    }
+    .avatar{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+        margin-left: 48px;
+    }
+}
+.header-top-icons img + img{
+    padding-left: 33px;
+
+}
+.header__top-login{
+    margin-left: 20px;    
+    .name{
+        font-weight: 700;
+    }
+    .total-price{
+        color: $button;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 500;
+    }
+}
+.header__bottom{    
+    background-color: yellow;
+}
+.header__bottom-inner{
+    height: 82px;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+}
+.menu__list{
+    li{
+        display: inline-block;
+        & + li{
+            margin-left: 34px;
+        }
+    }
+    a{
+        color: #333333;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+.header__bottom-serch form{
+    max-width: 360px;
+    margin: 0 auto;
+    position: relative;
+    input{
+        display: block;
+        width: 100%;
+        border-radius: 23px;
+        border: none;
+        height: 45px;
+        font-size: 15px;
+        padding-left: 25px;
+        padding-right: 85px;
+    }
+    button{
+        position: absolute;
+        border: none;
+        top: 0;
+        right: 0;
+        width: 70px;
+        height: 45px;
+        border-radius: 23px;
+        background-color: $button;
+        color: white;
+    }
+}
